@@ -1,0 +1,12 @@
+.lazy-load-wrapper {
+  max-height: 1150px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lazy-load-wrapper li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}

@@ -37,15 +37,33 @@ const frontendConfig = {
             NODE_ENV: JSON.stringify(process.env.APP_ENV || 'development'),
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader",
+                exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ],
+                exclude: /node_modules/
+            }
+        ]
+    },
     devServer: {
         static: path.resolve(__dirname, 'dist/frontend'),
         compress: true,
-        port: 3000,
+        port: process.env.FRONTEND_PORT || 3000,
         hot: true,
         proxy: [
             {
                 context: ['/api'],
-                target: `http://localhost:${process.env.APP_PORT}`,
+                target: process.env.API_HOST,
                 secure: false,
                 changeOrigin: true,
             }
