@@ -10,3 +10,32 @@
 Бэк: express
 
 Фронт: не важно
+
+
+## Project Setup Guide
+
+Follow the steps below to set up the project for development:
+
+### Step 1: Copy Environment File
+
+Make a copy of the .env.example file and rename it to .env.
+
+```shell
+cp .env.example .env
+```
+
+### Step 2: Install Dependencies
+
+To install all the necessary dependencies, run the following command:
+
+```shell
+npm install
+```
+
+### Step 3: Start Development Server
+
+To start the development server, use the following command:
+
+```shell
+npm run dev
+```

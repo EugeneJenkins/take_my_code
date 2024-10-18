@@ -35,8 +35,8 @@ const ListItem: React.FC<ListItemProps> = ({ item, index, onCheckboxChange }) =>
                         checked={item.selected}
                         onChange={handleCheckboxChange}
                     />
-                    <span>Animal: {item.animal}.</span>
-                    <span style={{marginLeft: 10}}>Breed: {item.breed}</span>
+                    <span>Animal: <b>{item.animal}</b>.</span>
+                    <span style={{marginLeft: 10}}>Breed: <b>{item.breed}</b></span>
                 </li>
             )}
         </Draggable>

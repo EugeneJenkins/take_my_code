@@ -30,7 +30,9 @@ export const getAllAnimals = async (limit: number, offset: number, search: strin
         return response.data;
     } catch (error) {
         console.error("Error fetching data:", error);
-        throw error;
+        // throw error;
+
+        return {animals: [], count: 0}
     }
 }
 
